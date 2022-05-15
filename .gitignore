@@ -1,4 +1,15 @@
 /archive
 /Dataset
-
-
+/050_Questioned
+/050_Renfrenced
+/data
+/docs
+/newdata
+/SignaturesData
+/SignaturesDataTest
+/svmtest
+/TestFeatures
+/tests
+/TrainingSet
+testFarjallah.ipynb
+Untitled.ipynb
