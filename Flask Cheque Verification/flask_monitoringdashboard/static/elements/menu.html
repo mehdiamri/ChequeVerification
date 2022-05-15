@@ -1,0 +1,55 @@
+<ul class="navbar-nav navbar-sidenav nav-pills">
+    <li class="nav-item" title="Dashboard">
+        <a class="nav-link nav-link-collapse collapsed"
+           data-toggle="collapse" data-target="#collapseDashboard">
+            <i class="fas fa-tachometer-alt"></i>
+            <span class="nav-link-text">Dashboard</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="collapseDashboard">
+            <li ng-class="{'active': menu.page=='overview'}">
+                <a href="overview">Overview</a></li>
+            <li ng-class="{'active': menu.page=='reporting'}">
+                <a href="reporting">Reporting</a></li>
+        </ul>
+    </li>
+
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" ng-show="menu.endpoint.info.id > 0"
+        data-original-title="{{ menu.endpoint.info.endpoint }}">
+        <a class="nav-link nav-link-collapse collapsed"
+           data-toggle="collapse" data-target="#collapseEndpoint">
+            <i class="fa fa-fw fa-asterisk"></i>
+            <span class="nav-link-text">{{ menu.endpoint.info.endpoint }}</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="collapseEndpoint">
+            <li ng-class="{'active': menu.page=='endpoint_hourly'}">
+                <a href="endpoint/{{ menu.endpoint.info.id }}/hourly_load">
+                    Hourly API Utilization</a></li>
+            <li ng-class="{'active': menu.page=='endpoint_user_version'}">
+                <a href="endpoint/{{ menu.endpoint.info.id }}/version_user">
+                    User-Focused Multi-Version Performance</a></li>
+            <li ng-class="{'active': menu.page=='endpoint_ip'}">
+                <a href="endpoint/{{ menu.endpoint.info.id }}/version_ip">
+                    IP-Focused Multi-Version Performance</a></li>
+            <li ng-class="{'active': menu.page=='endpoint_version'}">
+                <a href="endpoint/{{ menu.endpoint.info.id }}/versions">
+                    Per-Version Performance</a></li>
+            <li ng-class="{'active': menu.page=='endpoint_user'}">
+                <a href="endpoint/{{ menu.endpoint.info.id }}/users">
+                    Per-User Performance</a></li>
+            <li ng-class="{'active': menu.page=='endpoint_profiler'}">
+                <a href="endpoint/{{ menu.endpoint.info.id }}/profiler">
+                    Profiler</a></li>
+            <li ng-class="{'active': menu.page=='endpoint_grouped_profiler'}">
+                <a href="endpoint/{{ menu.endpoint.info.id }}/grouped-profiler">
+                    Grouped Profiler</a></li>
+            <li ng-class="{'active': menu.page=='endpoint_outlier'}">
+                <a href="endpoint/{{ menu.endpoint.info.id }}/outliers">
+                    Outliers</a></li>
+              <li ng-class="{'active': menu.page=='status_code_distribution'}">
+                <a href="endpoint/{{ menu.endpoint.info.id }}/status_code_distribution">Status Code Distribution</a>
+            </li>
+        </ul>
+    </li>
+
+
+</ul>
